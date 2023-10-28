@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel form</title>
 </head>
+
 <body>
     <header id="header">
         <h1>Travel Agency</h1>
@@ -15,54 +16,125 @@
         </nav>
         <hr>
     </header>
+
     <aside> 
         <hr>
         <nav>
-            <a href="index.html#travelOffers">Travel offers</a>
-            <a href="index.html#carRent">Car rent</a>
-            <a href="index.html#travelTips">Travel tips</a>
+            <a href="index.html#travel-offers">Travel offers</a>
+            <a href="index.html#car-rent">Car rent</a>
+            <a href="index.html#travel-tips">Travel tips</a>
             <a href="index.html#magazine">The Magazine</a>
         </nav>
         <hr>
     </aside>
+
     <main>
         <section>
+            <h2>Travel form</h2>
             <form action="index.html">
-                <h2>Travel form</h2>
+                <fieldset>
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" placeholder="First Name" required>
+                    <br>
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact details</legend>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="example@gmail.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Example +37069696969" required patern="+[0-9]{8-15}">
+                </fieldset>
+
                 <fieldset>
                     <legend>Gender</legend>
-                    <label><input type="radio" id="female" name="gender" value="female" checked> Female</label>
-                    <label><input type="radio" id="male" name="gender" value="male"> Male</label>
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="non-binary">Non-binary</label>
+                    <input type="radio" id="non-binary" name="gender" value="non-binary">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="yes" name="gender" value="yes">
+                    <label for=""></label>
                 </fieldset>
+
                 <fieldset>
                     <legend>Personality</legend>
-                    <input type="checkbox" name="personality" id="loving" value="loving" checked> <label for="loving">Loving</label>
-                    <input type="checkbox" name="personality" id="lazy" value="lazy"> <label for="lazy">Lazy</label>
-                    <input type="checkbox" name="personality" id="energetic" value="energetic"> <label for="energetic">Energetic</label>
+                    <label for="loving">Loving</label>
+                    <input type="checkbox" name="personality" id="loving" value="loving" checked>
+                    <label for="lazy">Lazy</label>
+                    <input type="checkbox" name="personality" id="lazy" value="lazy"> 
+                    <label for="energetic">Energetic</label>
+                    <input type="checkbox" name="personality" id="energetic" value="energetic">
+                    <label for="calm">Calm</label>
+                    <input type="checkbox" name="personality" id="calm" value="calm">
+                    <label for="adventurous">Adventurous</label>
+                    <input type="checkbox" name="personality" id="adventurous" value="adventurous">
                 </fieldset>
-                <input type="text" name="name" placeholder="Name" required>
+
+                <fieldset>
+                    <legend>Travel search</legend>
+                    <label for="people-count">Number of people</label>
+                    <select id="people-count" name="people-count">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <label for="continent">Continent</label>
+                    <select name="continent" id="continent">
+                        <option value="all">All</option>
+                        <option value="europe">Europe</option>
+                        <option value="africa">Africa</option>
+                        <option value="asia">Asia</option>
+                        <option value="south-america">South America</option>
+                        <option value="north-america">North America</option>
+                        <option value="antarctica">Antarctica</option>
+                        <option value="australia-oceania">Australia and Oceania</option>
+                    </select>
+                    <label for=""></label>
+                    <select name="" id="">
+                        <option value=""></option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Travel date</legend>
+                    <label for="date-start">trip starts</label>
+                    <input type="date" id="date-start" name="date-start" required>
+                    <label for="date-end">trip ends</label>
+                    <input type="date" id="date-end" name="date-end" required>
+                    
+                    <label for="flexible">flexible</label>
+                    <input type="checkbox" name="personality" id="flexible" value="flexible">
+                </fieldset>
+                <!--   -->
+                
+                <label for="comments">Comments</label>
+                <br>
+                <textarea id="comments" name="comments" rows="6" cols="66" >
+                </textarea>
                 <button type="submit">Submit</button>
             </form>
         </section>
     </main>
+
     <footer>
-        <hr>
-        <section>
-            <h2>Contact us</h2>
+        <h2>Contact us</h2>
+        <address>
             <p>Phone: <a href="tel:+37069696969">+37069696969</a></p>
             <p>Email: <a href="mailto:travelagencycontact@travelagency.com">travelagencycontact@travelagency.com</a>
-            <address>
-                <p>Address:</p>
-                <p>Laisvės alėja 33</p>
-                <p>Kaunas, Lietuva, 44311</p>
-            </address>
-        </section>
-        <section>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.3412104821127!2d23.91599587574719!3d54.89693315758715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e72276dd555557%3A0x2bf3519be19be30c!2sKaunas%20Information%20Technology%20School!5e0!3m2!1sen!2slt!4v1697922704092!5m2!1sen!2slt" 
-                width="400" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </section>
+            <p>Laisvės alėja 33</p>
+            <p>Kaunas, Lietuva, 44311</p>
+        </address>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2294.3412104821127!2d23.91599587574719!3d54.89693315758715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e72276dd555557%3A0x2bf3519be19be30c!2sKaunas%20Information%20Technology%20School!5e0!3m2!1sen!2slt!4v1697922704092!5m2!1sen!2slt" 
+            width="400" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
         <p>&copy; UAB Travel Agency</p>
         <a href="#header">back to top</a>
     </footer>
