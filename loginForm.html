@@ -7,14 +7,13 @@
 </head>
 <body>
     <header id="header">
-        <h1>Travel agency</h1>
-        <a href="index.html"><img src="img/logo.webp" alt="logo" width="130" height="130"></a>
         <nav>
-            <a href="index.html">Travel agency</a>
+            <a href="index.html"><img src="img/logo.webp" alt="logo" width="130" height="130"></a>
             <a href="travelForm.html">Travel form</a>
             <a href="personalBlog.html">Personal blog</a>
         </nav>
     </header>
+
     <aside> 
         <hr>
         <nav>
@@ -25,14 +24,15 @@
         </nav>
         <hr>
     </aside>
+
     <main>
-        <h2>Login</h2>
+        <h1>Login</h1>
         <form action="personalBlog.html">
             <label for="username">Name</label>
             <input type="text" id="username" name="username" placeholder="username" required>
             <br>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="email" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
+            <input type="email" name="email" id="email" placeholder="email" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}(\.[a-zA-Z]{2,6})?">
             <br>
             <label for="password">Password</label>
             <input type="password" name="password" id="password" placeholder="8-30 characters" required minlength="8" maxlength="30">
@@ -40,6 +40,7 @@
             <button type="submit">Submit</button>
         </form>
     </main>
+
     <footer>
         <h2>Contact us</h2>
         <address>

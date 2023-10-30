@@ -8,9 +8,8 @@
 
 <body>
     <header id="header">
-        <h1>Travel Agency</h1>
-        <a href="index.html"><img src="img/logo.webp" alt="logo" width="130" height="130"></a>
         <nav>
+            <a href="index.html"><img src="img/logo.webp" alt="logo" width="130" height="130"></a>
             <a href="loginForm.html">Login</a>
             <a href="personalBlog.html">Personal blog</a>
         </nav>
@@ -29,98 +28,104 @@
     </aside>
 
     <main>
-        <section>
-            <h2>Travel form</h2>
-            <form action="index.html">
-                <fieldset>
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" placeholder="First Name" required>
-                    <br>
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
-                </fieldset>
+        <h1>Travel form</h1>
 
-                <fieldset>
-                    <legend>Contact details</legend>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="example@gmail.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
-                    <label for="phone">Phone</label>
-                    <input type="tel" name="phone" id="phone" placeholder="Example +37069696969" required patern="+[0-9]{8-15}">
-                </fieldset>
-
-                <fieldset>
-                    <legend>Gender</legend>
-                    <label for="female">Female</label>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="male">Male</label>
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="non-binary">Non-binary</label>
-                    <input type="radio" id="non-binary" name="gender" value="non-binary">
-                    <label for="yes">Yes</label>
-                    <input type="radio" id="yes" name="gender" value="yes">
-                    <label for=""></label>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Personality</legend>
-                    <label for="loving">Loving</label>
-                    <input type="checkbox" name="personality" id="loving" value="loving" checked>
-                    <label for="lazy">Lazy</label>
-                    <input type="checkbox" name="personality" id="lazy" value="lazy"> 
-                    <label for="energetic">Energetic</label>
-                    <input type="checkbox" name="personality" id="energetic" value="energetic">
-                    <label for="calm">Calm</label>
-                    <input type="checkbox" name="personality" id="calm" value="calm">
-                    <label for="adventurous">Adventurous</label>
-                    <input type="checkbox" name="personality" id="adventurous" value="adventurous">
-                </fieldset>
-
-                <fieldset>
-                    <legend>Travel search</legend>
-                    <label for="people-count">Number of people</label>
-                    <select id="people-count" name="people-count">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                    </select>
-                    <label for="continent">Continent</label>
-                    <select name="continent" id="continent">
-                        <option value="all">All</option>
-                        <option value="europe">Europe</option>
-                        <option value="africa">Africa</option>
-                        <option value="asia">Asia</option>
-                        <option value="south-america">South America</option>
-                        <option value="north-america">North America</option>
-                        <option value="antarctica">Antarctica</option>
-                        <option value="australia-oceania">Australia and Oceania</option>
-                    </select>
-                    <label for=""></label>
-                    <select name="" id="">
-                        <option value=""></option>
-                    </select>
-                </fieldset>
-                <fieldset>
-                    <legend>Travel date</legend>
-                    <label for="date-start">trip starts</label>
-                    <input type="date" id="date-start" name="date-start" required>
-                    <label for="date-end">trip ends</label>
-                    <input type="date" id="date-end" name="date-end" required>
-                    
-                    <label for="flexible">flexible</label>
-                    <input type="checkbox" name="personality" id="flexible" value="flexible">
-                </fieldset>
-                <!--   -->
-                
-                <label for="comments">Comments</label>
+        <form action="index.html">
+            <fieldset>
+                <legend>Name</legend>
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" placeholder="First Name" required>
                 <br>
-                <textarea id="comments" name="comments" rows="6" cols="66" >
-                </textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact details</legend>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="example@gmail.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}(\.[a-zA-Z]{2,6})?">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" placeholder="Example +37069696969" required patern="+[0-9]{8-15}$">
+            </fieldset>
+
+            <fieldset>
+                <legend>Gender</legend>
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="non-binary">Non-binary</label>
+                <input type="radio" id="non-binary" name="gender" value="non-binary" required>
+                <label for="yes">Yes</label>
+                <input type="radio" id="yes" name="gender" value="yes" required>
+                <label for=""></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Personality</legend>
+                <label for="loving">Loving</label>
+                <input type="checkbox" name="personality" id="loving" value="loving" checked>
+                <label for="lazy">Lazy</label>
+                <input type="checkbox" name="personality" id="lazy" value="lazy"> 
+                <label for="energetic">Energetic</label>
+                <input type="checkbox" name="personality" id="energetic" value="energetic">
+                <label for="calm">Calm</label>
+                <input type="checkbox" name="personality" id="calm" value="calm">
+                <label for="adventurous">Adventurous</label>
+                <input type="checkbox" name="personality" id="adventurous" value="adventurous">
+            </fieldset>
+
+            <fieldset>
+                <legend>Travel search</legend>
+                <label for="people-count">Number of people</label>
+                <select id="people-count" name="people-count">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+
+                <label for="continent">Continent</label>
+                <select name="continent" id="continent">
+                    <option value="all">All</option>
+                    <option value="europe">Europe</option>
+                    <option value="africa">Africa</option>
+                    <option value="asia">Asia</option>
+                    <option value="south-america">South America</option>
+                    <option value="north-america">North America</option>
+                    <option value="antarctica">Antarctica</option>
+                    <option value="australia-oceania">Australia and Oceania</option>
+                </select>
+
+                <label for="travel-type">Travel type</label>
+                <select name="travel-type" id="travel-type">
+                    <option value="cruise">Cruise</option>
+                    <option value="plane-and-hotel-">Plane and Hotel</option>
+                    <option value="hotel">Hotel</option>
+                    <option value="bus">Bus</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Travel date</legend>
+                <label for="date-start">trip starts</label>
+                <input type="date" id="date-start" name="date-start" required>
+                <label for="date-end">trip ends</label>
+                <input type="date" id="date-end" name="date-end" required>
+                <label for="flexible">flexible</label>
+                <input type="checkbox" name="personality" id="flexible" value="flexible">
+            </fieldset>
+
+            <!--   -->                
+            <label for="comments">Comments</label>
+            <br>
+            <textarea id="comments" name="comments" rows="6" cols="66" >
+            </textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
     </main>
 
     <footer>
