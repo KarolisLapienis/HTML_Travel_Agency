@@ -43,9 +43,9 @@
             <fieldset>
                 <legend>Contact details</legend>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="example@gmail.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}(\.[a-zA-Z]{2,6})?">
+                <input type="email" name="email" id="email" placeholder="example@gmail.com" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}(\.[a-zA-Z]{2,6})?" required>
                 <label for="phone">Phone</label>
-                <input type="tel" name="phone" id="phone" placeholder="Example +37069696969" required patern="+[0-9]{8-15}$">
+                <input type="tel" name="phone" id="phone" placeholder="Example +37069696969" pattern="+[0-9]{8-15}$" required>
             </fieldset>
 
             <fieldset>
@@ -58,7 +58,6 @@
                 <input type="radio" id="non-binary" name="gender" value="non-binary" required>
                 <label for="yes">Yes</label>
                 <input type="radio" id="yes" name="gender" value="yes" required>
-                <label for=""></label>
             </fieldset>
 
             <fieldset>
